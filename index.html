@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Guide To Flexbox</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Conceptos básicos y terminología</h1>
+
+    <img
+      src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg"
+      alt=""
+    />
+
+    <ul>
+      <li>
+        <strong>&lrm;main axis&lrm;</strong>&lrm; – &lrm; El main axis de un
+        contenedor flexible es el main axis a lo largo del cual se colocan los
+        elementos flexibles. Cuidado, no es necesariamente horizontal; depende
+        de la propiedad (ver más abajo).&lrm;
+        <code>flex-direction</code>
+      </li>
+      <li>
+        <strong>&lrm;main-start | main-end&lrm;</strong>&lrm;: los elementos
+        flexibles se colocan dentro del contenedor comenzando desde el inicio
+        principal y yendo al extremo principal.&lrm;
+      </li>
+      <li>
+        <strong>&lrm;main size&lrm;</strong>&lrm;: el ancho o la altura de un
+        elemento flexible, lo que sea que esté en la dimensión principal, es el
+        main size del artículo. La propiedad de main size del elemento flexible
+        es la propiedad 'width' o 'height', la que esté en la dimensión
+        principal.&lrm;
+      </li>
+      <li>
+        <strong>&lrm;cross main&lrm;</strong>&lrm;: el eje perpendicular al main
+        axis se denomina eje transversal. Su dirección depende de la dirección
+        del main axis.&lrm;
+      </li>
+      <li>
+        <strong>&lrm;cross-start | cross-end&lrm;</strong>&lrm;: las líneas flex
+        se llenan con elementos y se colocan en el contenedor comenzando en el
+        lado de cross-start del contenedor flex y yendo hacia el lado
+        cross-end.&lrm;
+      </li>
+      <li>
+        <strong>&lrm;cross size&lrm;</strong>&lrm;: el ancho o alto de un
+        elemento flexible, cualquiera que sea la dimensión de cruz, es el cross
+        size del elemento. La propiedad de cross size es cualquiera de las
+        opciones de 'anchura' o 'altura' que se encuentre en la cota
+        transversal.&lrm;
+      </li>
+    </ul>
+
+    <h2>flex-direction</h2>
+
+    <div class="form-group">
+      <input type="radio" name="flex-direction" value="row" id="row" />
+      <label for="row">row</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="flex-direction"
+        value="row-reverse"
+        id="row-reverse"
+      />
+      <label for="row-reverse">row-reverse</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" name="flex-direction" value="column" id="column" />
+      <label for="column">column</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="flex-direction"
+        value="column-reverse"
+        id="column-reverse"
+      />
+      <label for="column-reverse">column-reverse</label>
+    </div>
+
+    <h2>justify-content</h2>
+
+    <div class="form-group">
+      <input
+        type="radio"
+        name="justify-content"
+        value="flex-start"
+        id="flex-start"
+      />
+      <label for="flex-start">flex-start</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="justify-content"
+        value="flex-end"
+        id="flex-end"
+      />
+      <label for="flex-end">flex-end</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" name="justify-content" value="center" id="center" />
+      <label for="center">center</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="justify-content"
+        value="space-between"
+        id="space-between"
+      />
+      <label for="space-between">space-between</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="justify-content"
+        value="space-around"
+        id="space-around"
+      />
+      <label for="space-around">space-around</label>
+    </div>
+    <div class="form-group">
+      <input
+        type="radio"
+        name="justify-content"
+        value="space-evenly"
+        id="space-evenly"
+      />
+      <label for="space-evenly">space-evenly</label>
+    </div>
+
+    <div class="container" data-main-axis="horizontal">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="axis"></div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
