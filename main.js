@@ -8,9 +8,9 @@ function handleInput({ target }) {
   container.style[name] = value;
 
   if (name !== "flex-direction") return;
-  container.dataset.mainAxis = getMainAxis(value);
+  container.dataset.axis = getAxis(value);
 }
 
-function getMainAxis(value) {
+function getAxis(value) {
   return value.includes("row") ? "horizontal" : "vertical";
 }

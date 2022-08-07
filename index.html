@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Guide To Flexbox</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1>Conceptos básicos y terminología</h1>
@@ -57,93 +57,129 @@
 
     <h2>flex-direction</h2>
 
-    <div class="form-group">
-      <input type="radio" name="flex-direction" value="row" id="row" />
-      <label for="row">row</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="flex-direction"
-        value="row-reverse"
-        id="row-reverse"
-      />
-      <label for="row-reverse">row-reverse</label>
-    </div>
-    <div class="form-group">
-      <input type="radio" name="flex-direction" value="column" id="column" />
-      <label for="column">column</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="flex-direction"
-        value="column-reverse"
-        id="column-reverse"
-      />
-      <label for="column-reverse">column-reverse</label>
-    </div>
-
-    <h2>justify-content</h2>
-
-    <div class="form-group">
-      <input
-        type="radio"
-        name="justify-content"
-        value="flex-start"
-        id="flex-start"
-      />
-      <label for="flex-start">flex-start</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="justify-content"
-        value="flex-end"
-        id="flex-end"
-      />
-      <label for="flex-end">flex-end</label>
-    </div>
-    <div class="form-group">
-      <input type="radio" name="justify-content" value="center" id="center" />
-      <label for="center">center</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="justify-content"
-        value="space-between"
-        id="space-between"
-      />
-      <label for="space-between">space-between</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="justify-content"
-        value="space-around"
-        id="space-around"
-      />
-      <label for="space-around">space-around</label>
-    </div>
-    <div class="form-group">
-      <input
-        type="radio"
-        name="justify-content"
-        value="space-evenly"
-        id="space-evenly"
-      />
-      <label for="space-evenly">space-evenly</label>
+    <div class="wrapper">
+      <div class="form-group">
+        <input type="radio" name="flex-direction" value="row" id="row" />
+        <label for="row">row</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="flex-direction"
+          value="row-reverse"
+          id="row-reverse"
+        />
+        <label for="row-reverse">row-reverse</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" name="flex-direction" value="column" id="column" />
+        <label for="column">column</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="flex-direction"
+          value="column-reverse"
+          id="column-reverse"
+        />
+        <label for="column-reverse">column-reverse</label>
+      </div>
     </div>
 
-    <div class="container" data-main-axis="horizontal">
+    <h2>justify-content - main axis</h2>
+
+    <div class="wrapper">
+      <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="flex-start"
+          id="main-flex-start"
+        />
+        <label for="main-flex-start">flex-start</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="flex-end"
+          id="main-flex-end"
+        />
+        <label for="main-flex-end">flex-end</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="center"
+          id="main-center"
+        />
+        <label for="main-center">center</label>
+      </div>
+      <!-- <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="space-between"
+          id="space-between"
+        />
+        <label for="space-between">space-between</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="space-around"
+          id="space-around"
+        />
+        <label for="space-around">space-around</label>
+      </div>
+      <div class="form-group">
+        <input
+          type="radio"
+          name="justify-content"
+          value="space-evenly"
+          id="space-evenly"
+        />
+        <label for="space-evenly">space-evenly</label>
+      </div> -->
+    </div>
+
+    <h2>align-items - cross axis</h2>
+
+    <div class="wrapper">
+      <div class="form-group">
+        <input
+          type="radio"
+          name="align-items"
+          value="flex-start"
+          id="flex-start"
+        />
+        <label for="flex-start">flex-start</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" name="align-items" value="flex-end" id="flex-end" />
+        <label for="flex-end">flex-end</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" name="align-items" value="center" id="center" />
+        <label for="center">center</label>
+      </div>
+    </div>
+
+    <div class="container" data-axis="horizontal">
+      <div class="cross-start">cross start</div>
+      <div class="cross-end">cross end</div>
+      <div class="main-start">main start</div>
+      <div class="main-end">main end</div>
       <div class="box">1</div>
       <div class="box">2</div>
       <div class="box">3</div>
       <div class="box">4</div>
-      <div class="axis"></div>
+      <div class="main"></div>
+      <div class="cross"></div>
     </div>
 
-    <script src="/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
